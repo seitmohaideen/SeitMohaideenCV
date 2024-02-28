@@ -45,6 +45,7 @@ $porcent-vue: 2;
 	min-width: 270px;
 	width: 100%;
 	min-height: 100%;
+	background-color: #333; /* Dark background color */
 }
 
 .progressbar {

@@ -1,1 +1,3 @@
-$(`.circlechart`).circlechart();
+$(document).ready(function() {
+  $('.circlechart').circlechart();
+});

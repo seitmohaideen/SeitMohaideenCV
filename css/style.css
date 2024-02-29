@@ -415,7 +415,7 @@ a:focus {
           align-items: center;
   text-align: center;
   margin-top: 45px;
-  background-color: #00bbf0;
+  background-color: #00204a;
   padding: 20px;
   border-radius: 5px;
 }
@@ -445,7 +445,7 @@ a:focus {
 
 .service_section .box .detail-box h5 {
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .service_section .box .detail-box a {

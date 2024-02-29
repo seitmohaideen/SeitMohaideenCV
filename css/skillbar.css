@@ -41,7 +41,7 @@ $porcent-vue: 2;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	min-width: 270px;
 	width: 100%;
 	min-height: 100%;

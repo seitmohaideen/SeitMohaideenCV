@@ -453,11 +453,6 @@ a:focus {
   font-weight: 600;
 }
 
-.service_section1 .box .detail-box a {
-  color: #ffffff;
-  font-weight: 600;
-}
-
 .service_section .box .detail-box a:hover {
   color: #00bbf0;
 }
@@ -609,6 +604,12 @@ a:focus {
   text-align: center;
   background-color: #00204a;
   color: #ffffff;
+}
+
+.team_section1 {
+  text-align: center;
+  background-color:  #ffffff;
+  color: #00204a;
 }
 
 .team_section .heading_container {

@@ -417,7 +417,7 @@ a:focus {
   margin-top: 45px;
   background-color: #00204a;
   background: -webkit-gradient(linear, left top, left bottom, from(#002759), to(#002b64));
-    background: linear-gradient(to bottom, #b3d7ff, #00204a);
+    background: linear-gradient(to bottom, #00bbf0, #00204a);
   padding: 20px;
   border-radius: 5px;
   font-family: "Open Sans", sans-serif;

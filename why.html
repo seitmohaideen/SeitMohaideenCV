@@ -50,13 +50,11 @@ body {
 }
 .circle.per-25 {
   background-image: conic-gradient(#00204a 25%, #b3d7ff 0);
-  animation: fillAnimation 1s ease forwards;
-
+  animation: gradientAnimation 2s linear infinite;
 }
 .circle.per-40 {
   background-image: conic-gradient(#00204a 40%, #b3d7ff 0);
-  animation: fillAnimation 1s ease forwards;
-
+  animation: gradientAnimation 2s linear infinite;
 }
 
 .circle.per-50 {
@@ -106,12 +104,12 @@ body {
   color: rgba(255, 255, 255, 0.75);
 }
 
-@keyframes fillAnimation {
-  from {
-    width: 0;
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    width: 100%;
+  100% {
+    background-position: 100% 50%;
   }
 }
 

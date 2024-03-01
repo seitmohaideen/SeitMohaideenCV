@@ -867,6 +867,12 @@ pre code {
     flex: 0 0 50%;
     max-width: 50%;
   }
+
+  .col1-sm-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 20%;
+    max-width: 50%;
+}
   .col-sm-7 {
     -ms-flex: 0 0 58.333333%;
     flex: 0 0 58.333333%;

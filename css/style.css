@@ -637,6 +637,22 @@ a:focus {
   background: linear-gradient(to bottom, #002759, #002b64);
 }
 
+.team_section .team_container .box1 {
+  padding: 35px 0 0 0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-left: 60px;
+    margin-top: 25px;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  margin-top: 45px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#002759), to(#002b64));
+  background: linear-gradient(to bottom, #002759, #002b64);
+}
+
+margin-left: 60px;
+    margin-top: 25px;
+
 .team_section .team_container .box .img-box {
   display: -webkit-box;
   display: -ms-flexbox;

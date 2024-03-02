@@ -112,6 +112,26 @@ body {
   color: rgba(255, 255, 255, 0.75);
 }
 
+@keyframes marquee {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .marquee-container {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .marquee-content {
+        display: inline-block;
+        animation: marquee 10s linear infinite;
+    }
+
   
 </style>
  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -320,6 +340,12 @@ function glowSkillBar(event) {
           </div>
         </div>
       </div>
+
+	  <div class="marquee-container">
+    <div class="marquee-content">
+        <p>Download my Resume below! </p>
+    </div>
+
   </section>
   <!-- end why section -->
 

@@ -44,7 +44,14 @@ body {
   border-radius: 50%;
   background: #FFCDB2;
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
+
+.circle:hover,
+.circle.clicked {
+  transform: scale(1.1);
+}
+	
 .circle.per-25 {
   background-image: conic-gradient(#b3d7ff 25%, #00204a 0);
 }
@@ -126,6 +133,13 @@ body {
 
 <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/56/1/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/56/1/util.js"></script></head>
 
+<script> // Function to handle click event on skill bars
+function glowSkillBar(event) {
+  // Toggle 'clicked' class for the clicked skill bar
+  event.currentTarget.classList.toggle('clicked');
+}
+</script>
+	
 <body class="sub_page">
 
   <div class="hero_area">

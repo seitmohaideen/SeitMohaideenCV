@@ -132,6 +132,26 @@ body {
         animation: marquee 10s linear infinite;
     }
 
+
+   @keyframes fade {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .fade-container {
+        text-align: center;
+    }
+
+    .fade-content {
+        animation: fade 3s linear infinite;
+    }
   
 </style>
  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -351,6 +371,11 @@ function glowSkillBar(event) {
 	  <div class="marquee-container">
     <div class="marquee-content">
         <h2>Download my Resume below! </h2>
+    </div>
+
+		  <div class="fade-container">
+    <div class="fade-content">
+        <p>This text is fading in and out.</p>
     </div>
 
   </section>

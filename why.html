@@ -117,6 +117,7 @@ body {
   
 </style>
 
+<!-- Update the JavaScript code to handle click event on skill bars -->
 <script>
   // Function to handle click event on skill bars
   function glowSkillBar(event) {
@@ -131,10 +132,12 @@ body {
     clickedSkillBar.classList.add('glow');
   }
 
-  // Add event listeners to all skill bars
-  var skillBars = document.querySelectorAll('.circle');
-  skillBars.forEach(function(skillBar) {
-    skillBar.addEventListener('click', glowSkillBar);
+  // Add event listeners to all skill bars when the DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    var skillBars = document.querySelectorAll('.circle');
+    skillBars.forEach(function(skillBar) {
+      skillBar.addEventListener('click', glowSkillBar);
+    });
   });
 </script>
 

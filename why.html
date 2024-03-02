@@ -86,20 +86,19 @@ body {
   background-image: conic-gradient(#00204a 100%, #b3d7ff 0);
 }
 
-.circle.per-95 {
-  background-color: #00204a;
-  animation: gradientAnimation 2s infinite alternate;
-}
+ .circle.percentage95 {
+            animation: fillAnimation 2s linear forwards;
+        }
 
-/* Define the animation */
-@keyframes gradientAnimation {
-  0% {
-    background-color: #00204a;
-  }
-  95% {
-    background-color: #b3d7ff;
-  }
-}
+        @keyframes fillAnimation {
+            0% {
+                background-image: conic-gradient(#00204a 0%, #b3d7ff 0%);
+            }
+
+            100% {
+                background-image: conic-gradient(#00204a 95%, #b3d7ff 0%);
+            }
+        }
 	
 .circle .inner {
   display: flex;
@@ -307,7 +306,7 @@ body {
                 </h5>
 
               </div>
-              <div class="circle per-95">
+              <div class="circle percentage95 per-95">
     <div class="inner">95%</div>
   </div>
             </div>

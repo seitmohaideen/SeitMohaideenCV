@@ -50,12 +50,9 @@ body {
 }
 .circle.per-25 {
   background-image: conic-gradient(#00204a 25%, #b3d7ff 0);
-  animation: gradientAnimation 2s linear infinite;
 }
 .circle.per-40 {
   background-image: conic-gradient(#00204a 40%, #b3d7ff 0);
-	animation: gradientAnimation 2s linear infinite;
-
 }
 
 .circle.per-50 {
@@ -76,8 +73,6 @@ body {
 
 .circle.per-80 {
   background-image: conic-gradient(#00204a 80%, #b3d7ff 0);
-	  animation: gradientAnimation 2s linear infinite;
-
 }
 
 .circle.per-85 {
@@ -86,14 +81,26 @@ body {
 
 .circle.per-90 {
   background-image: conic-gradient(#00204a 90%, #b3d7ff 0);
-	  animation: gradientAnimation 2s linear infinite;
-
 }
 .circle.per-100 {
   background-image: conic-gradient(#00204a 100%, #b3d7ff 0);
-	  animation: gradientAnimation 2s linear infinite;
-
 }
+
+.circle.per-95 {
+  background-color: #00204a;
+  animation: gradientAnimation 2s infinite alternate;
+}
+
+/* Define the animation */
+@keyframes gradientAnimation {
+  0% {
+    background-color: #00204a;
+  }
+  95% {
+    background-color: #b3d7ff;
+  }
+}
+	
 .circle .inner {
   display: flex;
   justify-content: center;
@@ -110,17 +117,6 @@ body {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.75);
 }
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
-
 
   
 </style>
@@ -311,8 +307,8 @@ body {
                 </h5>
 
               </div>
-              <div class="circle per-100">
-    <div class="inner">100%</div>
+              <div class="circle per-95">
+    <div class="inner">95%</div>
   </div>
             </div>
           </div>

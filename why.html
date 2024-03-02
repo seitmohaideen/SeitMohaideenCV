@@ -108,38 +108,8 @@ body {
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* Add glow effect */
-.circle.glow {
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Adjust shadow color and size as needed */
-}
-
-
   
 </style>
-
-<!-- Update the JavaScript code to handle click event on skill bars -->
-<script>
-  // Function to handle click event on skill bars
-  function glowSkillBar(event) {
-    // Remove 'glow' class from all skill bars
-    var skillBars = document.querySelectorAll('.circle');
-    skillBars.forEach(function(skillBar) {
-      skillBar.classList.remove('glow');
-    });
-
-    // Add 'glow' class to the clicked skill bar
-    var clickedSkillBar = event.currentTarget;
-    clickedSkillBar.classList.add('glow');
-  }
-
-  // Add event listeners to all skill bars when the DOM is loaded
-  document.addEventListener('DOMContentLoaded', function() {
-    var skillBars = document.querySelectorAll('.circle');
-    skillBars.forEach(function(skillBar) {
-      skillBar.addEventListener('click', glowSkillBar);
-    });
-  });
-</script>
 
  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
@@ -238,7 +208,7 @@ body {
                 </h5>
 
               </div>
-              <div class="circle per-90" onclick="glowSkillBar(event)"> 
+              <div class="circle per-90"> 
              <div class="inner">90%</div>
 </div>
   </div>
@@ -252,7 +222,7 @@ body {
 					Unix Shell Scripting
                 </h5>
               </div>
-              <div class="circle per-80 onclick="glowSkillBar(event)">
+              <div class="circle per-80>
     <div class="inner">80%</div>
   </div>
             </div>
@@ -264,7 +234,7 @@ body {
 					4GL Progres
                 </h5>
               </div>
-              <div class="circle per-70 onclick="glowSkillBar(event)">
+              <div class="circle per-70>
     <div class="inner">70%</div>
   </div>
             </div>

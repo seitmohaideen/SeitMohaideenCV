@@ -108,92 +108,36 @@ body {
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* Add this CSS code at the end of your existing styles */
-
-@keyframes fill {
-  from { width: 0; }
-}
-
-.circle.per-25 .inner,
-.circle.per-40 .inner,
-.circle.per-50 .inner,
-.circle.per-60 .inner,
-.circle.per-70 .inner,
-.circle.per-75 .inner,
-.circle.per-80 .inner,
-.circle.per-85 .inner,
-.circle.per-90 .inner,
-.circle.per-95 .inner,
-.circle.per-100 .inner {
-  animation: fill 1.5s ease-in-out forwards;
-}
-
-.circle .inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 115px;
-  height: 115px;
-  background: #000;
-  border-radius: 50%;
-  font-size: 1.85em;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.75);
-  overflow: hidden; /* Added overflow property */
-  width: 0; /* Start with zero width */
-}
-
-.circle.per-25 .inner {
-  width: 25%; /* Adjust width based on percentage */
-}
-
-.circle.per-40 .inner {
-  width: 40%;
-}
-
-.circle.per-50 .inner {
-  width: 50%;
-}
-
-.circle.per-60 .inner {
-  width: 60%;
-}
-
-.circle.per-70 .inner {
-  width: 70%;
-}
-
-.circle.per-75 .inner {
-  width: 75%;
-}
-
-.circle.per-80 .inner {
-  width: 80%;
-}
-
-.circle.per-85 .inner {
-  width: 85%;
-}
-
-.circle.per-90 .inner {
-  width: 90%;
-}
-
-.circle.per-95 .inner {
-  width: 95%;
-}
-
-.circle.per-100 .inner {
-  width: 100%;
+/* Add glow effect */
+.circle.glow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Adjust shadow color and size as needed */
 }
 
 
   
 </style>
+
+<script>
+  // Function to handle click event on skill bars
+  function glowSkillBar(event) {
+    // Remove 'glow' class from all skill bars
+    var skillBars = document.querySelectorAll('.circle');
+    skillBars.forEach(function(skillBar) {
+      skillBar.classList.remove('glow');
+    });
+
+    // Add 'glow' class to the clicked skill bar
+    var clickedSkillBar = event.currentTarget;
+    clickedSkillBar.classList.add('glow');
+  }
+
+  // Add event listeners to all skill bars
+  var skillBars = document.querySelectorAll('.circle');
+  skillBars.forEach(function(skillBar) {
+    skillBar.addEventListener('click', glowSkillBar);
+  });
+</script>
+
  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
 
@@ -291,7 +235,7 @@ body {
                 </h5>
 
               </div>
-              <div class="circle per-90">
+              <div class="circle per-90 onclick="glowSkillBar(event)">">
     <div class="inner">90%</div>
   </div>
             </div>
@@ -304,7 +248,7 @@ body {
 					Unix Shell Scripting
                 </h5>
               </div>
-              <div class="circle per-80">
+              <div class="circle per-80 onclick="glowSkillBar(event)">">
     <div class="inner">80%</div>
   </div>
             </div>
@@ -316,7 +260,7 @@ body {
 					4GL Progres
                 </h5>
               </div>
-              <div class="circle per-70">
+              <div class="circle per-70 onclick="glowSkillBar(event)">">
     <div class="inner">70%</div>
   </div>
             </div>

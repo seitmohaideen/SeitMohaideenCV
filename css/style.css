@@ -54,6 +54,7 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+      justify-content: center;
 }
 
 .heading_container h2 {

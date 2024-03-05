@@ -50,6 +50,7 @@
   transition: 0.3s;
   font-size: 17px;
   box-sizing: border-box;
+  width: 33.33%;
 }
 
 /* Change background color of buttons on hover */
@@ -68,8 +69,9 @@
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
-  width: 50%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* Center the content */
@@ -147,31 +149,51 @@
           Educational <span> Qualification</span>
         </h2>
       </div>
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'X')">Class X</button>
-  <button class="tablinks" onclick="openCity(event, 'XII')">Class XII</button>
-  <button class="tablinks" onclick="openCity(event, 'Btech')">B.Tech.</button>
-</div>
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
 
-<div id="X" class="tabcontent">
-  <p>Education: St. Joseph's Convent Higher Secondary School</p>
-  <p>10th, ICSE</p>
-  <p>Percentage: 90 %</p>
-  <p>Year: 2004 - 2016</p>
-</div>
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  box-sizing: border-box;
+  width: 33.33%;
+}
 
-<div id="XII" class="tabcontent">
-  <p>Education: St. Joseph's Convent Higher Secondary School</p>
-  <p>Class XII</p>
-  <p>Percentage: 90 %</p>
-  <p>Year: 2004 - 2016</p>
-</div>
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
 
-<div id="Btech" class="tabcontent">
-  <p>Education: St. Joseph's Convent Higher Secondary School</p>
-  <p>B.Tech.</p>
-  <p>Year: 2004 - 2016</p>
-</div>
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Center the content */
+.tabcontent p {
+  text-align: center;
+}
   </section>
   <!-- end team section -->
 

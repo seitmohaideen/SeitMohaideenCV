@@ -101,6 +101,56 @@
   color: rgba(255, 255, 255, 0.75);
 }
 
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  margin: 0 auto;
+  width: 50%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: #ffffff;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  box-sizing: border-box;
+  width: 33.33%;
+  text-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #00bbf0;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #00bbf0;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  width: 50%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Center the content */
+.tabcontent p {
+  margin: 0;
+}
+
   
 </style>
 	
@@ -568,139 +618,51 @@ function glowSkillBar(event) {
 
   <!-- team section -->
   <section class="team_section layout_padding">
+
     <div class="container-fluid">
       <div class="heading_container heading_center">
         <h2 class="">
-          LinkedIn <span> Recommendation</span>
+          Educational <span> Qualification</span>
         </h2>
       </div>
 
-      <div class="team_container">
-        <div class="row">
-          <div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/team-1.jpg" class="img1" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                 Timothy Tyrakowski - Data Developer at PCMI Corporation
-                </h5>
-                <p>
-                  Seit is a great employee, who is also a quick learner. We have a proprietary registration system which requires a lot of learning on the job, which he learned and quickly became a top performer. He could handle any task no matter how complex, while asking good questions when coming across new subject areas. Seit could quickly and reliably complete tasks even while under a high workload and a lot of pressure. He is wonderful to work with.
-                </p>
-		      <a href="https://www.linkedin.com/in/timothy-tyrakowski-3032521a2/">
-                  Check out 
-                </a>
-              </div>
-             
-            </div>
-          </div>
+      <br> <br> <br>
 
-          <div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/team-2.jpg" class="img1" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                 Timothy Tyrakowski - Data Developer at PCMI Corporation
-                </h5>
-                <p>
-                  Seit is a great employee, who is also a quick learner. We have a proprietary registration system which requires a lot of learning on the job, which he learned and quickly became a top performer. He could handle any task no matter how complex, while asking good questions when coming across new subject areas. Seit could quickly and reliably complete tasks even while under a high workload and a lot of pressure. He is wonderful to work with.
-                </p>
-		      <a href="https://www.linkedin.com/in/timothy-tyrakowski-3032521a2/">
-                  Check out 
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/team-3.jpg" class="img1" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                 Timothy Tyrakowski - Data Developer at PCMI Corporation
-                </h5>
-                <p>
-                  Seit is a great employee, who is also a quick learner. We have a proprietary registration system which requires a lot of learning on the job, which he learned and quickly became a top performer. He could handle any task no matter how complex, while asking good questions when coming across new subject areas. Seit could quickly and reliably complete tasks even while under a high workload and a lot of pressure. He is wonderful to work with.
-                </p>
-		      <a href="https://www.linkedin.com/in/timothy-tyrakowski-3032521a2/">
-                  Check out 
-                </a>
-              </div>
-            </div>
-          </div>
-	<div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/team-2.jpg" class="img1" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                 Timothy Tyrakowski - Data Developer at PCMI Corporation
-                </h5>
-                <p>
-                  Seit is a great employee, who is also a quick learner. We have a proprietary registration system which requires a lot of learning on the job, which he learned and quickly became a top performer. He could handle any task no matter how complex, while asking good questions when coming across new subject areas. Seit could quickly and reliably complete tasks even while under a high workload and a lot of pressure. He is wonderful to work with.
-                </p>
-		      <a href="https://www.linkedin.com/in/timothy-tyrakowski-3032521a2/">
-                  Check out 
-                </a>
-              </div>
-            </div>
-          </div>
-		<div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/team-2.jpg" class="img1" alt="">
-              </div>
-              <div class="detail-box">
-               <h5>
-                 Timothy Tyrakowski - Data Developer at PCMI Corporation
-                </h5>
-                <p>
-                  Seit is a great employee, who is also a quick learner. We have a proprietary registration system which requires a lot of learning on the job, which he learned and quickly became a top performer. He could handle any task no matter how complex, while asking good questions when coming across new subject areas. Seit could quickly and reliably complete tasks even while under a high workload and a lot of pressure. He is wonderful to work with.
-                </p>
-		      <a href="https://www.linkedin.com/in/timothy-tyrakowski-3032521a2/">
-                  Check out 
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/team-4.jpg" class="img1" alt="">
-              </div>
-              <div class="detail-box">
-               <h5>
-                 Timothy Tyrakowski - Data Developer at PCMI Corporation
-                </h5>
-                <p>
-                  Seit is a great employee, who is also a quick learner. We have a proprietary registration system which requires a lot of learning on the job, which he learned and quickly became a top performer. He could handle any task no matter how complex, while asking good questions when coming across new subject areas. Seit could quickly and reliably complete tasks even while under a high workload and a lot of pressure. He is wonderful to work with.
-                </p>
-		      <a href="https://www.linkedin.com/in/timothy-tyrakowski-3032521a2/">
-                  Check out 
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'X')">SSLC</button>
+  <button class="tablinks" onclick="openCity(event, 'XII')">HSC</button>
+  <button class="tablinks" onclick="openCity(event, 'Btech')">BE</button>
+</div>
+
+<div id="X" class="tabcontent">
+  <p>Fuscos Matriculation Higher Secondary School</p>
+  <p>Class X</p>
+  <p>Percentage: 89.4%</p>
+  <p>Year: 2012</p>
+</div>
+
+<div id="XII" class="tabcontent">
+  <p>CEOA Higher Secondary School</p>
+  <p>Class XII</p>
+  <p>Percentage: 90.91%</p>
+  <p>Year: 2014</p>
+</div>
+
+<div id="Btech" class="tabcontent">
+  <p>Bannari Amman Institute of Technology</p>
+  <p>BE (Mechatronics)</p>
+  <p>Year: 2014 - 2018</p>
+</div>
+
+      
   </section>
   <!-- end team section -->
 
-
-  <!-- client section -->
-
-  <section class="client_section layout_padding">
+   <section class="client_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center psudo_white_primary mb_45">
         <h2>
-          What says our <span>Customers</span>
+          My<span>Certificates</span>
         </h2>
       </div>
       <div class="carousel-wrap ">
@@ -797,8 +759,7 @@ function glowSkillBar(event) {
       </div>
     </div>
   </section>
-
-  <!-- end client section -->
+  <!-- end team section -->
 
 
   <!-- info section -->
@@ -915,6 +876,26 @@ function glowSkillBar(event) {
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
+
+<script>
+
+// Trigger click event on first tab button on page load
+document.getElementsByClassName("tablinks")[0].click();
+
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
 
 </body>
 

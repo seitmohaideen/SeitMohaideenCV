@@ -200,6 +200,11 @@ img {
   border-style: none;
 }
 
+img1 {
+    vertical-align: middle;
+    border-style: solid;
+}
+
 svg {
   overflow: hidden;
   vertical-align: middle;

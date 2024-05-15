@@ -96,7 +96,17 @@ body {
   margin-bottom: 0;
 }
 
+.heading_container3 h2 {
+  position: relative;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
 .heading_container h2 span {
+  color: #00bbf0;
+}
+
+.heading_container3 h2 span {
   color: #00bbf0;
 }
 

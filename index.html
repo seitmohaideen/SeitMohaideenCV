@@ -189,6 +189,10 @@
       right: 20px;
       z-index: 9999;
     }
+
+.featured-name p {
+  margin: 0;
+}
 </style>
 	
   <!-- bootstrap core css -->
@@ -292,9 +296,10 @@ function glowSkillBar(event) {
             <div class="container ">
               <div class="row">
                 <div class="col-md-6 ">
-                  <div class="detail-box">
+                  <div class="detail-box featured-name">
                      <h1>
-                      Welcome!, It's me Seit 
+                      	<p>Welcome!, I'm a <span id="typed-text"></span><span class="typed-cursor" aria-hidden="true"></span></p>
+
                     </h1>
                     <div class="btn-box">
                       <a href="" class="btn1">
@@ -1052,6 +1057,16 @@ function openCity(evt, cityName) {
         audio.controls = true; // Show audio controls
       }
     }
+//typetext
+
+document.addEventListener('DOMContentLoaded', () => {
+  const typed = new Typed('#typed-text', {
+    strings: ['Data Analyst', 'Programmer', 'Data enthusiast', 'Problem Solver'],
+    typeSpeed: 100,
+    backSpeed: 50,
+    loop: true
+  });
+});
 </script>
 
 </body>

@@ -151,7 +151,7 @@
   margin: 0;
 }
 
- /* Audio styles */
+/* Audio styles */
     .background-audio {
       position: fixed;
       bottom: 20px;
@@ -173,6 +173,15 @@
       text-align: center;
       font-size: 18px;
       cursor: pointer;
+    }
+
+    /* Show audio controls */
+    .background-audio audio[controls] {
+      display: block;
+      position: fixed;
+      bottom: 70px;
+      right: 20px;
+      z-index: 9999;
     }
   
 </style>
@@ -198,24 +207,7 @@
 function glowSkillBar(event) {
   // Toggle 'clicked' class for the clicked skill bar
   event.currentTarget.classList.toggle('clicked');
-}
-
-	 //music
- $(document).ready(function() {
-      const audio = document.getElementById('backgroundAudio');
-      const toggleButton = document.getElementById('toggleButton');
-
-      toggleButton.addEventListener('click', function() {
-        if (audio.paused) {
-          audio.play();
-        } else {
-          audio.pause();
-        }
-      });
-    });
-	 
-	 
-	 
+}	 
 	 
 </script>
 
@@ -225,7 +217,7 @@ function glowSkillBar(event) {
 
 <body>
 
- <!-- Background music -->
+  <!-- Background music -->
   <div class="background-audio">
     <audio id="backgroundAudio" autoplay loop>
       <source src="music.mp3" type="audio/mpeg">
@@ -233,7 +225,7 @@ function glowSkillBar(event) {
     </audio>
     <button id="toggleButton">🎵</button>
   </div>
-
+	
   <div class="hero_area">
 
     <div class="hero_bg_box">
@@ -1089,6 +1081,12 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
+	 $(document).ready(function() {
+      $('#toggleButton').click(function() {
+        $('#backgroundAudio').prop('controls', true); // Show audio controls
+      });
+    });
+	
 </script>
 
 </body>

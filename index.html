@@ -151,16 +151,7 @@
   margin: 0;
 }
 
-/* Audio styles */
-    .background-audio {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 9999;
-      opacity: 0.5;
-    }
-
-    /* Floating music control */
+ /* Floating music control */
     .background-audio button {
       position: absolute;
       bottom: 0;
@@ -183,7 +174,6 @@
       right: 20px;
       z-index: 9999;
     }
-  
 </style>
 	
   <!-- bootstrap core css -->
@@ -217,7 +207,7 @@ function glowSkillBar(event) {
 
 <body>
 
-  <!-- Background music -->
+<!-- Background music -->
   <div class="background-audio">
     <audio id="backgroundAudio" autoplay loop>
       <source src="music.mp3" type="audio/mpeg">
@@ -225,6 +215,7 @@ function glowSkillBar(event) {
     </audio>
     <button id="toggleButton">🎵</button>
   </div>
+
 	
   <div class="hero_area">
 
@@ -1083,10 +1074,16 @@ function openCity(evt, cityName) {
 
 	 $(document).ready(function() {
       $('#toggleButton').click(function() {
-        $('#backgroundAudio').prop('controls', true); // Show audio controls
+        const audio = $('#backgroundAudio')[0]; // Get the audio element
+        const controls = $('#backgroundAudio').prop('controls'); // Check if controls are visible
+
+        if (controls) {
+          $('#backgroundAudio').prop('controls', false); // Hide audio controls
+        } else {
+          $('#backgroundAudio').prop('controls', true); // Show audio controls
+        }
       });
     });
-	
 </script>
 
 </body>

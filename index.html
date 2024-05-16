@@ -151,7 +151,7 @@
   margin: 0;
 }
 
-  /* Audio styles */
+   /* Audio styles */
     .background-audio {
       position: fixed;
       bottom: 20px;
@@ -160,7 +160,7 @@
       opacity: 0.5;
     }
 
-    /* Hide audio controls */
+    /* Hide audio controls initially */
     .background-audio audio {
       display: none;
     }
@@ -179,7 +179,6 @@
       font-size: 18px;
       cursor: pointer;
     }
-
   
 </style>
 	
@@ -213,7 +212,7 @@ function glowSkillBar(event) {
 
 <body>
 
-   <!-- Background music -->
+     <!-- Background music -->
   <div class="background-audio">
     <audio autoplay loop>
       <source src="music.mp3" type="audio/mpeg">
@@ -1085,8 +1084,10 @@ function openCity(evt, cityName) {
       toggleButton.addEventListener('click', function() {
         if (audio.paused) {
           audio.play();
+          audio.setAttribute('controls', 'controls'); // Add controls attribute
         } else {
           audio.pause();
+          audio.removeAttribute('controls'); // Remove controls attribute
         }
       });
     });

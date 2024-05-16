@@ -151,7 +151,7 @@
   margin: 0;
 }
 
- /* Audio styles */
+  /* Audio styles */
     .background-audio {
       position: fixed;
       bottom: 20px;
@@ -213,13 +213,13 @@ function glowSkillBar(event) {
 
 <body>
 
-  <!-- Background music -->
+   <!-- Background music -->
   <div class="background-audio">
     <audio autoplay loop>
       <source src="music.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    <button onclick="toggleAudio()">🎵</button>
+    <button id="toggleButton">🎵</button>
   </div>
 
   <div class="hero_area">
@@ -1076,6 +1076,20 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+	// Music Controller
+ document.addEventListener('DOMContentLoaded', function() {
+      const audio = document.querySelector('.background-audio audio');
+      const toggleButton = document.getElementById('toggleButton');
+
+      toggleButton.addEventListener('click', function() {
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      });
+    });
 </script>
 
 </body>

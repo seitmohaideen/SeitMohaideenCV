@@ -607,16 +607,6 @@ pre code {
   align-items: center;
 }
 
-.row2 {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-    flex-direction: row-reverse;
-
-
 .no-gutters {
   margin-right: 0;
   margin-left: 0;

@@ -929,15 +929,15 @@ function glowSkillBar(event) {
         </div>
         <div class="col-md-6 col-lg-3a info_col ">
           <h4>
-            Subscribe
+            Get in Touch!
           </h4>
           <form action="#">
-            <form id="contact-form">
+           <form id="contact-form">
   <input type="text" name="from_name" placeholder="Your Name" required><br>
   <input type="email" name="from_email" placeholder="Your Email" required><br>
   <input type="text" name="subject" placeholder="Subject" required><br>
   <textarea name="message" placeholder="Your Message" required></textarea><br>
-  <input type="submit" value="Send Message">
+  <input type="submit" value="Get in touch!">
 </form>
           </form>
         </div>
@@ -1007,9 +1007,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //subscribe
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
+document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
-    emailjs.sendForm('service_f7fkkd2', 'template_nqsupz6', this)
+    var formData = new FormData(this);
+    var message = formData.get('message'); // Extract message from the form
+
+    emailjs.send('service_f7fkkd2', 'template_nqsupz6', {
+      from_name: formData.get('from_name'),
+      from_email: formData.get('from_email'),
+      subject: formData.get('subject'),
+      message: message // Set the message as the body of the email
+    })
       .then(function(response) {
         console.log('Success!', response.status, response.text);
         alert('Message sent successfully!');
@@ -1017,6 +1025,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Failed...', error);
         alert('Message sending failed.');
       });
+    this.reset(); // Reset the form after sending
   });
 </script>
 
